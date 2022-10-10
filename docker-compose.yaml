@@ -8,7 +8,7 @@ services:
     - '80:8080'
     volumes:
     - "/mnt/projectdocker/vol1:/usr/local/tomcat/webapps"
-    - "/mnt/vol1:/usr/local/tomcat/logs"
+    - "/mnt/logs1:/usr/local/tomcat/logs"
 
   service_2:
     build:
@@ -18,4 +18,4 @@ services:
     - "90:8080"
     volumes:
     - "/mnt/projectdocker/vol2:/usr/local/tomcat/webapps"
-    - "/mnt/vol2:/usr/local/tomcat/logs"
+    - "/mnt/logs2:/usr/local/tomcat/logs"
