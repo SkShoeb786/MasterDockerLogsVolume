@@ -1,0 +1,19 @@
+version: '3'
+services:
+  service_1:
+    build:
+      context: ./cont1
+    image: cont1
+    ports:
+    - '80:8080'
+    volumes:
+    - "/mnt/projectdocker:/usr/local/tomcat/webapps"
+
+  service_2:
+    build:
+      context: ./cont2
+    image: cont2
+    ports:
+    - "90:8080"
+    volumes:
+    - "/mnt/projectdocker:/usr/local/tomcat/webapps"
