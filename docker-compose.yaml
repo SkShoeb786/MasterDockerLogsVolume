@@ -7,7 +7,8 @@ services:
     ports:
     - '80:8080'
     volumes:
-    - "/mnt/projectdocker:/usr/local/tomcat/webapps"
+    - "/mnt/projectdocker/vol1:/usr/local/tomcat/webapps"
+    - "/mnt/vol1:/usr/local/tomcat/logs"
 
   service_2:
     build:
@@ -16,4 +17,5 @@ services:
     ports:
     - "90:8080"
     volumes:
-    - "/mnt/projectdocker:/usr/local/tomcat/webapps"
+    - "/mnt/projectdocker/vol2:/usr/local/tomcat/webapps"
+    - "/mnt/vol2:/usr/local/tomcat/logs"
